@@ -1,0 +1,29 @@
+version: '3.8'
+networks:
+  guillermods-net:
+
+services:
+  frontend:
+    container_name: frontend-instance
+    networks:
+      default:
+      guillermods-net:
+        aliases: 
+          - inventario.guillermods.net
+    image: inventario-frontend:v0.0.1
+    ports:
+      - 443:443
+  backend:
+    container_name: backend-instance
+    networks:
+      default:
+      guillermods-net:
+        aliases: 
+          - api-inventario.guillermods.net
+    image: inventario-backend:v0.0.1
+    ports:
+      - 8080:8080
+
+
+
+
