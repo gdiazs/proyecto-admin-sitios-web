@@ -13,7 +13,7 @@ function Layout(props: LayoutProps) {
 
   return (
     <div className="grid mt-3">
-      <div className="col-8 col-offset-2 bg-white border-round-sm p-0">
+      <div className="col-6 col-offset-3 bg-white border-round-sm p-0">
         <Nav />
         <div className="grid ">
           <div className="col">
@@ -22,7 +22,7 @@ function Layout(props: LayoutProps) {
             </div>
           </div>
         </div>
-        <div className="bg-primary-200 h-2rem"></div>
+        <div className="bg-bluegray-600 h-2rem"></div>
       </div>
     </div>
   );

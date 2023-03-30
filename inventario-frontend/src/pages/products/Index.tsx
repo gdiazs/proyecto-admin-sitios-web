@@ -1,5 +1,6 @@
 import { DataView } from "primereact/dataview";
 import { Tag } from "primereact/tag";
+import { Button } from "primereact/button";
 
 interface Product {
   productId: number;
@@ -37,10 +38,13 @@ function buildItemTemplate(item: Product): React.ReactNode {
     <div className="col-12 my-3">
       <div className="flex">
         <img src={item.productImageUrl} />
-        <div className="ml-3">
+        <div className="ml-3 flex-grow-1">
           <div className="font-bold mb-2">{item.productName}</div>
           <div>Descripción: {item.productDescription}</div>
           <Tag>Cantidad: {item.quantity}</Tag>
+        </div>
+        <div className="mt-3">
+            <Button severity="warning" label="Editar" icon="pi pi-pencil" />
         </div>
       </div>
     </div>
