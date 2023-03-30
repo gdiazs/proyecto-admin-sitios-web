@@ -1,13 +1,13 @@
-package net.guillermods.inventariobackend;
+package net.guillermods.inventario;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InventarioBackendApplication {
+public class InventarioApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InventarioBackendApplication.class, args);
+		SpringApplication.run(InventarioApplication.class, args);
 	}
 
 }
