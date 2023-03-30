@@ -1,18 +1,18 @@
 import Home from "./pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 import DefaultLayout from "./layouts/default";
-import About from "./pages/About";
+import ProductsIndex from "./pages/products/Index";
 
 export default createBrowserRouter([homeRoutes(), aboutRoutes()]);
 
 function aboutRoutes() {
   return {
-    path: "/about",
-    element: <DefaultLayout title="Acerca de" />,
+    path: "/products",
+    element: <DefaultLayout title="Productos" />,
     children: [
       {
         index: true,
-        element: <About />,
+        element: <ProductsIndex />,
       },
     ],
   };

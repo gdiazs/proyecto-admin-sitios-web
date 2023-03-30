@@ -3,7 +3,7 @@ import { MenuItem, MenuItemCommandEvent } from "primereact/menuitem";
 import { useNavigate } from "react-router-dom";
 
 function Nav() {
-  return <Menubar start={"INV"} model={getMenuItems()} />;
+  return <Menubar model={getMenuItems()} />;
 }
 
 function getMenuItems(): Array<MenuItem> {
@@ -11,7 +11,7 @@ function getMenuItems(): Array<MenuItem> {
 
   return [
     {
-      label: "Inicio",
+      label: "Inventario",
       icon: "pi pi-fw pi-home",
       command: commands.toHome,
     },
@@ -34,11 +34,10 @@ const useCommands = () => {
   const navigate = useNavigate();
   return {
     toHome: (e: MenuItemCommandEvent) => {
-      navigate("/")
-      console.log(import.meta.env.VITE_API_INVENTORY_BACKEND)
-      
+      navigate("/");
+      console.log(import.meta.env.VITE_API_INVENTORY_BACKEND);
     },
-    toAbout: (e: MenuItemCommandEvent) => navigate("/about"),
+    toAbout: (e: MenuItemCommandEvent) => navigate("/products"),
   };
 };
 
