@@ -1,7 +1,6 @@
 import { Menubar } from "primereact/menubar";
 import { MenuItem, MenuItemCommandEvent } from "primereact/menuitem";
 import { useNavigate } from "react-router-dom";
-import "./index.css";
 
 function Nav() {
   return <Menubar start={"INV"} model={getMenuItems()} />;
@@ -34,7 +33,11 @@ function getMenuItems(): Array<MenuItem> {
 const useCommands = () => {
   const navigate = useNavigate();
   return {
-    toHome: (e: MenuItemCommandEvent) => navigate("/"),
+    toHome: (e: MenuItemCommandEvent) => {
+      navigate("/")
+      console.log(import.meta.env.VITE_API_INVENTORY_BACKEND)
+      
+    },
     toAbout: (e: MenuItemCommandEvent) => navigate("/about"),
   };
 };
