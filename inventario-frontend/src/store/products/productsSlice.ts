@@ -6,15 +6,7 @@ interface ProductState {
 }
 
 const initialState: ProductState = {
-  products: [
-    {
-      productId: 1,
-      productDescription: "Pequeñas",
-      productName: "Sillas",
-      productImageUrl: "https://placehold.co/80",
-      quantity: 1,
-    },
-  ],
+  products: [],
 };
 
 const productsSlice: any = createSlice({

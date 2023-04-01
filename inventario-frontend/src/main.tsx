@@ -11,11 +11,10 @@ import "primeflex/primeflex.css";
 import "./theme.css";
 import "./index.css";
 
-
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router}  />
+      <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
 );

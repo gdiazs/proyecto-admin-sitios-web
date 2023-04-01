@@ -7,11 +7,10 @@ import { RootState } from "../../store";
 import produce from "immer";
 
 export default function () {
+  const productReducer: any = useSelector(
+    (state: RootState) => state.productReducer
+  );
 
-
-  const productReducer: any = useSelector((state: RootState) => state.productReducer);
-
-  
   return (
     <div className="card">
       <DataView
@@ -35,7 +34,7 @@ function buildItemTemplate(item: Product): React.ReactNode {
           <Tag>Cantidad: {item.quantity}</Tag>
         </div>
         <div className="mt-3">
-            <Button severity="warning" label="Editar" icon="pi pi-pencil" />
+          <Button severity="warning" label="Editar" icon="pi pi-pencil" />
         </div>
       </div>
     </div>
