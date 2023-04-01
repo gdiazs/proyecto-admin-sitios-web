@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import Product from "../store/products/Product";
-import { addProduct } from "../store/products/ProductsSlice";
+import { addProduct } from "../store/products/productsSlice";
 
 function Home() {
 

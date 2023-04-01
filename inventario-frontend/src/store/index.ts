@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import productReducer from './products/ProductsSlice';
+import productReducer from './products/productsSlice';
 
 var reducer = combineReducers({
   productReducer
