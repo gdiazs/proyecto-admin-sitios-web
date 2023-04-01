@@ -1,31 +1,22 @@
 import { DataView } from "primereact/dataview";
 import { Tag } from "primereact/tag";
 import { Button } from "primereact/button";
-
-interface Product {
-  productId: number;
-  productName: string;
-  productDescription: string;
-  quantity: number;
-  productImageUrl: string;
-}
+import Product from "../../store/products/Product";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
+import produce from "immer";
 
 export default function () {
-  const n: Array<Product> = [
-    {
-      productId: 1,
-      productDescription: "Pequeñas",
-      productName: "Sillas",
-      productImageUrl: "https://placehold.co/80",
-      quantity: 1,
-    },
-  ];
 
+
+  const productReducer: any = useSelector((state: RootState) => state.productReducer);
+
+  
   return (
     <div className="card">
       <DataView
         layout={"list"}
-        value={n}
+        value={productReducer.products}
         itemTemplate={buildItemTemplate}
         emptyMessage="No hay productos"
       />
