@@ -1,1 +1,13 @@
-create table test( id varchar(3));
+CREATE TABLE PRODUCT(
+    ID UUID PRIMARY KEY,
+    NAME VARCHAR (255) NOT NULL,
+    DESCRIPTION VARCHAR (255) NOT NULL,
+    QUANTITY NUMBER DEFAULT 0,
+    IMAGE_URL VARCHAR(255)
+);
+
+INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
+VALUES('87ea4492-d99d-11ed-afa1-0242ac120002', 'Sillas', 'Sillas para alquilar', 10, '/images/sillas.svg');
+
+INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
+VALUES('e9538202-d99d-11ed-afa1-0242ac120002', 'Mesas', 'Mesas para alquilar', 10, '/images/mesas.svg');

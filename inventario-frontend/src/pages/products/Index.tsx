@@ -4,7 +4,6 @@ import { Button } from "primereact/button";
 import Product from "../../store/products/Product";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
-import produce from "immer";
 
 export default function () {
   const productReducer: any = useSelector(
@@ -27,10 +26,10 @@ function buildItemTemplate(item: Product): React.ReactNode {
   return (
     <div className="col-12 my-3">
       <div className="flex">
-        <img src={item.productImageUrl} />
+        <img src={item.imageUrl} />
         <div className="ml-3 flex-grow-1">
-          <div className="font-bold mb-2">{item.productName}</div>
-          <div>Descripción: {item.productDescription}</div>
+          <div className="font-bold mb-2">{item.name}</div>
+          <div>Descripción: {item.description}</div>
           <Tag>Cantidad: {item.quantity}</Tag>
         </div>
         <div className="mt-3">
