@@ -2,19 +2,31 @@ import { DataView } from "primereact/dataview";
 import { Tag } from "primereact/tag";
 import { Button } from "primereact/button";
 import Product from "../../store/products/Product";
-import { useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, AppThunkDispatch } from "../../store";
+import { useEffect } from "react";
+import {
+  fetchProductsThunk,
+  sayHello,
+  selectProducts,
+} from "../../store/products/productsSlice";
 
 export default function () {
-  const productReducer: any = useSelector(
-    (state: RootState) => state.productReducer
-  );
+  const dispatchThunk = useDispatch<AppThunkDispatch>();
+  const dispatch = useDispatch<AppDispatch>();
+
+  const productState: any = useSelector(selectProducts);
+
+  useEffect(() => {
+    dispatchThunk(fetchProductsThunk());
+    dispatch(sayHello());
+  }, []);
 
   return (
     <div className="card">
       <DataView
         layout={"list"}
-        value={productReducer.products}
+        value={productState.products}
         itemTemplate={buildItemTemplate}
         emptyMessage="No hay productos"
       />

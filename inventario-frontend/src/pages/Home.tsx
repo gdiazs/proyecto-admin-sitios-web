@@ -6,10 +6,10 @@ function Home() {
   const dispatch = useDispatch();
 
   const b: Product = {
-    productId: 1,
-    productDescription: "Pequeñas",
-    productName: "Sillas",
-    productImageUrl: "https://placehold.co/80",
+    id: 1,
+    description: "Pequeñas",
+    name: "Sillas",
+    imageUrl: "https://placehold.co/80",
     quantity: 1,
   };
 

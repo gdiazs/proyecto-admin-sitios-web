@@ -10,4 +10,4 @@ INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
 VALUES('87ea4492-d99d-11ed-afa1-0242ac120002', 'Sillas', 'Sillas para alquilar', 10, '/images/sillas.svg');
 
 INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
-VALUES('e9538202-d99d-11ed-afa1-0242ac120002', 'Mesas', 'Mesas para alquilar', 10, '/images/mesas.svg');
+VALUES('e9538202-d99d-11ed-afa1-0242ac120002', 'Mesas', 'Mesas para alquilar', 7, '/images/mesas.svg');
