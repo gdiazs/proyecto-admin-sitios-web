@@ -1,12 +1,12 @@
 import { useDispatch } from "react-redux";
 import Product from "../store/products/Product";
-import { addProduct } from "../store/products/productsSlice";
+import { sayHello } from "../store/products/productsSlice";
 
 function Home() {
   const dispatch = useDispatch();
 
   const b: Product = {
-    id: 1,
+    id: "1",
     description: "Pequeñas",
     name: "Sillas",
     imageUrl: "https://placehold.co/80",
@@ -14,7 +14,7 @@ function Home() {
   };
 
   const onButtonClick = () => {
-    dispatch(addProduct(b));
+    dispatch(sayHello());
   };
 
   return (

@@ -19,14 +19,19 @@ export const fetchProductsThunk = createAsyncThunk(
   }
 );
 
+export const removeItemThunk = createAsyncThunk(
+  "products/removeItemThunk",
+  async (id: string) => {
+    let response = await productsApi.removeItem(id);
+    return response.data;
+  }
+);
+
 const productsSlice: any = createSlice({
   name: "products",
   initialState,
 
   reducers: {
-    addProduct(state: ProductState, action: PayloadAction<Product>) {
-      state.products.push(action.payload);
-    },
     sayHello() {
       console.log("Hey Man");
     },
@@ -39,10 +44,22 @@ const productsSlice: any = createSlice({
         state.products = action.payload;
       }
     );
+
+    builder.addCase(
+      removeItemThunk.fulfilled,
+      (state: ProductState, action: PayloadAction<Product>) => {
+
+        let productFound: Product = state.products.filter(
+          (product: Product) => product.id === action.payload.id
+        )[0];
+        
+        productFound.quantity = action.payload.quantity;
+      }
+    );
   },
 });
 
 export const selectProducts = (state: RootState) => state.productReducer;
 
-export const { addProduct, sayHello } = productsSlice.actions;
+export const { removeItem, sayHello } = productsSlice.actions;
 export default productsSlice.reducer;

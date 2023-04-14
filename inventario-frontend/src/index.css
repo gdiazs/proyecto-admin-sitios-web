@@ -2,3 +2,7 @@ body {
   background-color: var(--bluegray-400);
   font-size: 0.5em;
 }
+
+.imageItem {
+  width: 8em;
+}

@@ -24,7 +24,6 @@ function getMenuItems(): Array<MenuItem> {
           command: commands.toAbout,
         },
         { label: "Agregar", icon: "pi pi-fw pi-plus" },
-        { label: "Eliminar", icon: "pi pi-fw pi-minus" },
       ],
     },
   ];
