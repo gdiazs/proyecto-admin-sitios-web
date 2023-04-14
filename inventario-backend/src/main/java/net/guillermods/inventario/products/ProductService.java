@@ -36,7 +36,7 @@ public class ProductService {
         var foundProduct = this.em.find(Product.class, id);
         var newQuantity = foundProduct.getQuantity() - 1;
 
-        if (newQuantity == 0) {
+        if (foundProduct.getQuantity() == 0) {
             return foundProduct;
         }
 

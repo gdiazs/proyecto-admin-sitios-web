@@ -7,7 +7,16 @@ CREATE TABLE PRODUCT(
 );
 
 INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
-VALUES('87ea4492-d99d-11ed-afa1-0242ac120002', 'Sillas', 'Sillas para alquilar', 10, '/images/sillas.svg');
+VALUES('87ea4492-d99d-11ed-afa1-0242ac120002', 'Sillas', 'Silla Gamer', 10, '/images/silla1.jpg');
 
 INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
-VALUES('e9538202-d99d-11ed-afa1-0242ac120002', 'Mesas', 'Mesas para alquilar', 7, '/images/mesas.svg');
+VALUES('e9538202-d99d-11ed-afa1-0242ac120002', 'Ratón PC', 'Ratón de computadora', 7, '/images/raton.jpg');
+
+INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
+VALUES('81caa20e-da61-11ed-afa1-0242ac120002', 'Ratón Gamer', 'Ratón de computadora', 7, '/images/raton.jpg');
+
+INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
+VALUES('88c70c6e-da61-11ed-afa1-0242ac120002', 'Teclado Gamer', 'Teclado de computadora', 7, '/images/teclado.jpg');
+
+INSERT INTO PRODUCT (ID, NAME, DESCRIPTION, QUANTITY, IMAGE_URL)
+VALUES('a06c59a0-da61-11ed-afa1-0242ac120002', 'Monitor 22"', 'Monitor LG', 7, '/images/monitor.jpg');
