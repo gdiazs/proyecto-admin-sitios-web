@@ -25,7 +25,7 @@ export default function () {
   return (
     <div className="card">
       <DataView
-        layout={"list"}
+        layout={"grid"}
         value={products}
         itemTemplate={buildItemTemplate}
         emptyMessage="No hay productos"
@@ -44,7 +44,7 @@ function buildItemTemplate(item: Product): React.ReactNode {
 
   return (
     <div className="col-12 md:col-6 my-3">
-      <div className="flex m-3 p-3 border-1 border-100 border-round shadow">
+      <div className="flex m-1 p-3 border-1 border-100 border-round shadow">
         <img src={imageUrl} className="imageItem" />
         <div className="ml-3 flex-grow-1">
           <div className="font-bold mb-2">{item.name}</div>
