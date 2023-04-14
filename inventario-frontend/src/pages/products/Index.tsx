@@ -43,7 +43,7 @@ function buildItemTemplate(item: Product): React.ReactNode {
   };
 
   return (
-    <div className="col-6 my-3">
+    <div className="col-12 md:col-6 my-3">
       <div className="flex m-3 p-3 border-1 border-100 border-round shadow">
         <img src={imageUrl} className="imageItem" />
         <div className="ml-3 flex-grow-1">

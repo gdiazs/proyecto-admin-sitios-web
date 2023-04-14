@@ -21,4 +21,16 @@ public class WebConfig {
 			}
 		};
 	}
+
+    @Bean @Profile("prod")
+	public WebMvcConfigurer corsConfigurerForProd() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**")
+				.allowedMethods("GET", "PUT", "POST","DELETE", "OPTIONS")
+				.allowedOrigins("https://inventario.guillermods.net");
+			}
+		};
+	}
 }

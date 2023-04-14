@@ -13,7 +13,7 @@ function Layout(props: LayoutProps) {
 
   return (
     <div className="grid mt-3">
-      <div className="col-6 col-offset-3 bg-white border-round-sm p-0">
+      <div className="col-12 lg:col-9 lg:col-offset-2  xl:col-6 xl:col-offset-3 bg-white border-round-sm p-0">
         <Nav />
         <div className="grid ">
           <div className="col">
